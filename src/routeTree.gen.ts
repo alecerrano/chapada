@@ -21,6 +21,7 @@ import { Route as CavalcanteRouteImport } from './routes/cavalcante'
 import { Route as CachoeirasRouteImport } from './routes/cachoeiras'
 import { Route as AltoParaisoRouteImport } from './routes/alto-paraiso'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GuiaSlugRouteImport } from './routes/guia.$slug'
 
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
@@ -82,6 +83,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuiaSlugRoute = GuiaSlugRouteImport.update({
+  id: '/guia/$slug',
+  path: '/guia/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/roteiros': typeof RoteirosRoute
   '/sao-jorge': typeof SaoJorgeRoute
   '/sobre': typeof SobreRoute
+  '/guia/$slug': typeof GuiaSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/roteiros': typeof RoteirosRoute
   '/sao-jorge': typeof SaoJorgeRoute
   '/sobre': typeof SobreRoute
+  '/guia/$slug': typeof GuiaSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/roteiros': typeof RoteirosRoute
   '/sao-jorge': typeof SaoJorgeRoute
   '/sobre': typeof SobreRoute
+  '/guia/$slug': typeof GuiaSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/roteiros'
     | '/sao-jorge'
     | '/sobre'
+    | '/guia/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/roteiros'
     | '/sao-jorge'
     | '/sobre'
+    | '/guia/$slug'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/roteiros'
     | '/sao-jorge'
     | '/sobre'
+    | '/guia/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +196,7 @@ export interface RootRouteChildren {
   RoteirosRoute: typeof RoteirosRoute
   SaoJorgeRoute: typeof SaoJorgeRoute
   SobreRoute: typeof SobreRoute
+  GuiaSlugRoute: typeof GuiaSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guia/$slug': {
+      id: '/guia/$slug'
+      path: '/guia/$slug'
+      fullPath: '/guia/$slug'
+      preLoaderRoute: typeof GuiaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -288,6 +308,7 @@ const rootRouteChildren: RootRouteChildren = {
   RoteirosRoute: RoteirosRoute,
   SaoJorgeRoute: SaoJorgeRoute,
   SobreRoute: SobreRoute,
+  GuiaSlugRoute: GuiaSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
