@@ -64,28 +64,32 @@
 }
 
 :root {
-  --radius: 0.25rem; /* Mais elegante, menos arredondado */
-  --background: oklch(0.98 0.005 90); /* Areia muito clara */
-  --foreground: oklch(0.20 0.03 260); /* Grafite escuro, quase preto */
+  --radius: 0rem; /* Bordas retas são mais premium e editoriais */
+  --background: oklch(0.99 0.002 90); /* Areia extremamente clara, quase branca */
+  --foreground: oklch(0.15 0.02 260); /* Quase preto, mas com profundidade */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0.03 260);
+  --card-foreground: oklch(0.15 0.02 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.03 260);
-  --primary: oklch(0.40 0.08 140); /* Verde cerrado profundo */
-  --primary-foreground: oklch(0.98 0.005 90);
-  --secondary: oklch(0.92 0.02 90); /* Areia um pouco mais escura */
-  --secondary-foreground: oklch(0.20 0.03 260);
-  --muted: oklch(0.95 0.02 90);
-  --muted-foreground: oklch(0.45 0.03 260);
-  --accent: oklch(0.70 0.12 70); /* Dourado areia */
-  --accent-foreground: oklch(0.20 0.03 260);
-  --destructive: oklch(0.50 0.15 30); /* Terracota */
-  --destructive-foreground: oklch(0.98 0.005 90);
-  --border: oklch(0.85 0.02 90);
-  --input: oklch(0.85 0.02 90);
-  --ring: oklch(0.40 0.08 140);
-  --font-display: 'Playfair Display', Georgia, serif;
+  --popover-foreground: oklch(0.15 0.02 260);
+  --primary: oklch(0.35 0.06 140); /* Verde cerrado mais profundo e sóbrio */
+  --primary-foreground: oklch(0.99 0.002 90);
+  --secondary: oklch(0.96 0.01 90); /* Areia sutil */
+  --secondary-foreground: oklch(0.15 0.02 260);
+  --muted: oklch(0.94 0.01 90);
+  --muted-foreground: oklch(0.40 0.02 260);
+  --accent: oklch(0.75 0.08 80); /* Dourado areia mais sofisticado */
+  --accent-foreground: oklch(0.15 0.02 260);
+  --destructive: oklch(0.45 0.12 35); /* Terracota queimado */
+  --destructive-foreground: oklch(0.99 0.002 90);
+  --border: oklch(0.90 0.01 90);
+  --input: oklch(0.90 0.01 90);
+  --ring: oklch(0.35 0.06 140);
+  --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+  
+  /* Espaçamento editorial */
+  --section-padding: 8rem;
+  --container-max: 90rem;
 }
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
