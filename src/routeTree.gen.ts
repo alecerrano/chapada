@@ -9,8 +9,74 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SaoJorgeRouteImport } from './routes/sao-jorge'
+import { Route as RoteirosRouteImport } from './routes/roteiros'
+import { Route as PousadasRouteImport } from './routes/pousadas'
+import { Route as PlanejeSuaViagemRouteImport } from './routes/planeje-sua-viagem'
+import { Route as ParaPousadasRouteImport } from './routes/para-pousadas'
+import { Route as OndeFicarRouteImport } from './routes/onde-ficar'
+import { Route as ExperienciasRouteImport } from './routes/experiencias'
+import { Route as CavalcanteRouteImport } from './routes/cavalcante'
+import { Route as CachoeirasRouteImport } from './routes/cachoeiras'
+import { Route as AltoParaisoRouteImport } from './routes/alto-paraiso'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SaoJorgeRoute = SaoJorgeRouteImport.update({
+  id: '/sao-jorge',
+  path: '/sao-jorge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoteirosRoute = RoteirosRouteImport.update({
+  id: '/roteiros',
+  path: '/roteiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PousadasRoute = PousadasRouteImport.update({
+  id: '/pousadas',
+  path: '/pousadas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanejeSuaViagemRoute = PlanejeSuaViagemRouteImport.update({
+  id: '/planeje-sua-viagem',
+  path: '/planeje-sua-viagem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParaPousadasRoute = ParaPousadasRouteImport.update({
+  id: '/para-pousadas',
+  path: '/para-pousadas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OndeFicarRoute = OndeFicarRouteImport.update({
+  id: '/onde-ficar',
+  path: '/onde-ficar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienciasRoute = ExperienciasRouteImport.update({
+  id: '/experiencias',
+  path: '/experiencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CavalcanteRoute = CavalcanteRouteImport.update({
+  id: '/cavalcante',
+  path: '/cavalcante',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CachoeirasRoute = CachoeirasRouteImport.update({
+  id: '/cachoeiras',
+  path: '/cachoeiras',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AltoParaisoRoute = AltoParaisoRouteImport.update({
+  id: '/alto-paraiso',
+  path: '/alto-paraiso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +85,186 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alto-paraiso': typeof AltoParaisoRoute
+  '/cachoeiras': typeof CachoeirasRoute
+  '/cavalcante': typeof CavalcanteRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/onde-ficar': typeof OndeFicarRoute
+  '/para-pousadas': typeof ParaPousadasRoute
+  '/planeje-sua-viagem': typeof PlanejeSuaViagemRoute
+  '/pousadas': typeof PousadasRoute
+  '/roteiros': typeof RoteirosRoute
+  '/sao-jorge': typeof SaoJorgeRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alto-paraiso': typeof AltoParaisoRoute
+  '/cachoeiras': typeof CachoeirasRoute
+  '/cavalcante': typeof CavalcanteRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/onde-ficar': typeof OndeFicarRoute
+  '/para-pousadas': typeof ParaPousadasRoute
+  '/planeje-sua-viagem': typeof PlanejeSuaViagemRoute
+  '/pousadas': typeof PousadasRoute
+  '/roteiros': typeof RoteirosRoute
+  '/sao-jorge': typeof SaoJorgeRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alto-paraiso': typeof AltoParaisoRoute
+  '/cachoeiras': typeof CachoeirasRoute
+  '/cavalcante': typeof CavalcanteRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/onde-ficar': typeof OndeFicarRoute
+  '/para-pousadas': typeof ParaPousadasRoute
+  '/planeje-sua-viagem': typeof PlanejeSuaViagemRoute
+  '/pousadas': typeof PousadasRoute
+  '/roteiros': typeof RoteirosRoute
+  '/sao-jorge': typeof SaoJorgeRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/alto-paraiso'
+    | '/cachoeiras'
+    | '/cavalcante'
+    | '/experiencias'
+    | '/onde-ficar'
+    | '/para-pousadas'
+    | '/planeje-sua-viagem'
+    | '/pousadas'
+    | '/roteiros'
+    | '/sao-jorge'
+    | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/alto-paraiso'
+    | '/cachoeiras'
+    | '/cavalcante'
+    | '/experiencias'
+    | '/onde-ficar'
+    | '/para-pousadas'
+    | '/planeje-sua-viagem'
+    | '/pousadas'
+    | '/roteiros'
+    | '/sao-jorge'
+    | '/sobre'
+  id:
+    | '__root__'
+    | '/'
+    | '/alto-paraiso'
+    | '/cachoeiras'
+    | '/cavalcante'
+    | '/experiencias'
+    | '/onde-ficar'
+    | '/para-pousadas'
+    | '/planeje-sua-viagem'
+    | '/pousadas'
+    | '/roteiros'
+    | '/sao-jorge'
+    | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AltoParaisoRoute: typeof AltoParaisoRoute
+  CachoeirasRoute: typeof CachoeirasRoute
+  CavalcanteRoute: typeof CavalcanteRoute
+  ExperienciasRoute: typeof ExperienciasRoute
+  OndeFicarRoute: typeof OndeFicarRoute
+  ParaPousadasRoute: typeof ParaPousadasRoute
+  PlanejeSuaViagemRoute: typeof PlanejeSuaViagemRoute
+  PousadasRoute: typeof PousadasRoute
+  RoteirosRoute: typeof RoteirosRoute
+  SaoJorgeRoute: typeof SaoJorgeRoute
+  SobreRoute: typeof SobreRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sao-jorge': {
+      id: '/sao-jorge'
+      path: '/sao-jorge'
+      fullPath: '/sao-jorge'
+      preLoaderRoute: typeof SaoJorgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roteiros': {
+      id: '/roteiros'
+      path: '/roteiros'
+      fullPath: '/roteiros'
+      preLoaderRoute: typeof RoteirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pousadas': {
+      id: '/pousadas'
+      path: '/pousadas'
+      fullPath: '/pousadas'
+      preLoaderRoute: typeof PousadasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/planeje-sua-viagem': {
+      id: '/planeje-sua-viagem'
+      path: '/planeje-sua-viagem'
+      fullPath: '/planeje-sua-viagem'
+      preLoaderRoute: typeof PlanejeSuaViagemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/para-pousadas': {
+      id: '/para-pousadas'
+      path: '/para-pousadas'
+      fullPath: '/para-pousadas'
+      preLoaderRoute: typeof ParaPousadasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onde-ficar': {
+      id: '/onde-ficar'
+      path: '/onde-ficar'
+      fullPath: '/onde-ficar'
+      preLoaderRoute: typeof OndeFicarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiencias': {
+      id: '/experiencias'
+      path: '/experiencias'
+      fullPath: '/experiencias'
+      preLoaderRoute: typeof ExperienciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cavalcante': {
+      id: '/cavalcante'
+      path: '/cavalcante'
+      fullPath: '/cavalcante'
+      preLoaderRoute: typeof CavalcanteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cachoeiras': {
+      id: '/cachoeiras'
+      path: '/cachoeiras'
+      fullPath: '/cachoeiras'
+      preLoaderRoute: typeof CachoeirasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alto-paraiso': {
+      id: '/alto-paraiso'
+      path: '/alto-paraiso'
+      fullPath: '/alto-paraiso'
+      preLoaderRoute: typeof AltoParaisoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +277,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AltoParaisoRoute: AltoParaisoRoute,
+  CachoeirasRoute: CachoeirasRoute,
+  CavalcanteRoute: CavalcanteRoute,
+  ExperienciasRoute: ExperienciasRoute,
+  OndeFicarRoute: OndeFicarRoute,
+  ParaPousadasRoute: ParaPousadasRoute,
+  PlanejeSuaViagemRoute: PlanejeSuaViagemRoute,
+  PousadasRoute: PousadasRoute,
+  RoteirosRoute: RoteirosRoute,
+  SaoJorgeRoute: SaoJorgeRoute,
+  SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
