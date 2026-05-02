@@ -37,6 +37,10 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:description", content: "Lovable Generated Project" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56907da4-ead8-4460-a099-0f2b3742be61/id-preview-f189388c--22048dc7-b16f-4d9e-8af1-305c87d1cb4c.lovable.app-1777741845420.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/56907da4-ead8-4460-a099-0f2b3742be61/id-preview-f189388c--22048dc7-b16f-4d9e-8af1-305c87d1cb4c.lovable.app-1777741845420.png" },
     ],
     links: [
       {
