@@ -5,9 +5,9 @@ import valeLuaImg from "@/assets/vale-lua.jpg";
 import cachoeiraImg from "@/assets/cachoeira.jpg";
 import { Button } from "@/components/ui/button";
 import { 
-  MapPin, Heart, Users, Mountain, 
+  Heart, Users, Mountain, 
   Sparkles, Crown, Ticket, Droplets, ArrowRight,
-  Clock, Compass, Car, Calendar, Info
+  Compass, Car, Calendar, Info
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 import { PortalHeader } from "@/components/portal/PortalHeader";
@@ -31,19 +31,19 @@ export const Route = createFileRoute("/")({
 const bases = [
   {
     name: "Alto Paraíso",
-    description: "Para quem quer estrutura, restaurantes, variedade de pousadas e boa base para explorar diferentes regiões da Chapada.",
+    description: "Estrutura completa, gastronomia diversa e o ponto central para exploração regional.",
     image: vilaImg,
     to: "/alto-paraiso"
   },
   {
     name: "São Jorge",
-    description: "Para quem quer ficar perto do Parque Nacional, viver uma vila charmosa e ter uma experiência mais rústica, alternativa e caminhável.",
+    description: "Charme rústico, porta de entrada do Parque Nacional e atmosfera pé no chão.",
     image: valeLuaImg,
     to: "/sao-jorge"
   },
   {
     name: "Cavalcante",
-    description: "Para quem busca Santa Bárbara, natureza profunda, autenticidade e uma Chapada mais contemplativa.",
+    description: "Cerrado profundo, cultura Kalunga e o caminho para a mística Santa Bárbara.",
     image: cachoeiraImg,
     to: "/cavalcante"
   }
@@ -93,143 +93,129 @@ const cachoeiras = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-body text-foreground selection:bg-primary/20 selection:text-primary">
+    <div className="min-h-screen bg-background font-body text-foreground selection:bg-primary/10">
       <PortalHeader />
 
       {/* Hero Section */}
-      <section className="relative flex h-[100svh] min-h-[600px] w-full items-center justify-center overflow-hidden">
+      <section className="relative flex h-[100svh] w-full items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
             alt="Chapada dos Veadeiros"
-            className="h-full w-full object-cover brightness-75 transition-transform duration-[10s] hover:scale-105"
+            className="h-full w-full object-cover brightness-[0.6] transition-transform duration-[15s] hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl px-6 lg:px-12">
-          <div className="max-w-4xl">
-            <span className="mb-6 inline-block text-[10px] font-black uppercase tracking-[0.4em] text-white/80">
-              Guia Editorial Premium
+        <div className="relative z-10 w-full max-w-[90rem] px-8 lg:px-16">
+          <div className="max-w-5xl">
+            <span className="mb-8 inline-block text-[10px] font-black uppercase tracking-[0.5em] text-accent">
+              Edição 2026 — Guia Editorial
             </span>
-            <h1 className="font-display text-5xl font-medium leading-[1.1] text-white md:text-7xl lg:text-8xl">
-              Chapada dos Veadeiros:<br />
-              <span className="italic">escolha melhor</span> onde ficar, o que fazer e como viver o destino.
+            <h1 className="font-display text-6xl font-medium leading-[1.05] text-white md:text-8xl lg:text-[10rem] tracking-tighter">
+              A Chapada<br />
+              <span className="italic font-light">Inspirada.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg text-white/90 md:text-xl lg:text-2xl font-light leading-relaxed">
-              Guias, roteiros, pousadas, cachoeiras e experiências para planejar sua viagem com mais clareza, segurança e intenção.
+            <p className="mt-10 max-w-2xl text-xl text-white/80 md:text-2xl font-light leading-relaxed">
+              Um guia curado para quem busca escolher melhor onde ficar, o que fazer e como viver o destino com intenção.
             </p>
 
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-16 flex flex-wrap gap-6">
               <Link to="/onde-ficar">
-                <Button className="rounded-none bg-primary px-8 py-7 text-xs font-bold uppercase tracking-widest hover:bg-primary/90">
-                  Ver onde ficar
+                <Button className="rounded-none bg-accent px-12 py-8 text-[10px] font-bold uppercase tracking-[0.2em] text-black hover:bg-white transition-all">
+                  Onde Ficar
                 </Button>
               </Link>
               <Link to="/roteiros">
-                <Button className="rounded-none bg-white px-8 py-7 text-xs font-bold uppercase tracking-widest text-black hover:bg-white/90">
-                  Explorar roteiros
+                <Button variant="outline" className="rounded-none border-white/20 bg-white/5 px-12 py-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-xl hover:bg-white hover:text-black transition-all">
+                  Explorar Roteiros
                 </Button>
               </Link>
-              <Link to="/pousadas">
-                <Button
-                  variant="outline"
-                  className="rounded-none border-white/30 bg-white/10 px-8 py-7 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-md hover:bg-white/20"
-                >
-                  Conhecer pousadas
-                </Button>
-              </Link>
-            </div>
-
-            <div className="mt-20 hidden flex-wrap gap-x-12 gap-y-4 border-t border-white/20 pt-8 lg:flex">
-              {["Alto Paraíso", "São Jorge", "Cavalcante", "Cachoeiras", "Pousadas", "Roteiros"].map((tag) => (
-                <div key={tag} className="group flex items-center gap-3 cursor-pointer">
-                  <div className="h-[1px] w-6 bg-white/30 transition-all group-hover:w-10 group-hover:bg-accent" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/60 transition-colors group-hover:text-white">
-                    {tag}
-                  </span>
-                </div>
-              ))}
             </div>
           </div>
+        </div>
+        
+        <div className="absolute bottom-12 right-16 hidden lg:block">
+           <div className="flex items-center gap-6">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Scroll to explore</span>
+              <div className="h-[1px] w-24 bg-white/20" />
+           </div>
         </div>
       </section>
 
       {/* Institutional Quote */}
-      <section className="bg-secondary py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 text-center lg:px-12">
-          <p className="mx-auto max-w-4xl font-display text-2xl font-light italic leading-relaxed text-foreground/80 md:text-3xl lg:text-4xl">
-            "A Chapada já tem desejo. O Chapada dos Veadeiros Online organiza a decisão."
-          </p>
-          <div className="mt-12 flex flex-col items-center gap-4">
-             <div className="h-12 w-[1px] bg-primary/30" />
-             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-               Um guia editorial para escolher melhor
-             </p>
+      <section className="bg-background py-32 lg:py-56 border-b border-border/50">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="max-w-4xl">
+            <p className="font-display text-4xl font-light italic leading-tight text-foreground/90 md:text-6xl lg:text-7xl tracking-tight">
+              "A Chapada já tem desejo. O Chapada dos Veadeiros Online organiza a decisão."
+            </p>
+            <div className="mt-16 flex items-center gap-6">
+               <div className="h-[1px] w-12 bg-primary" />
+               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                 SOBI DIGITAL — Inteligência Editorial
+               </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Escolha sua base */}
-      <section className="bg-background py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 max-w-2xl">
-            <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl lg:text-6xl">
-              Onde ficar na Chapada?
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              A Chapada dos Veadeiros não é um destino de uma única base. Alto Paraíso, São Jorge e Cavalcante oferecem experiências diferentes — e escolher bem onde ficar muda toda a viagem.
+      <section className="bg-background py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-10">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-6 block">Geografia e Base</span>
+              <h2 className="font-display text-5xl font-medium leading-[1.1] md:text-7xl tracking-tighter">
+                Onde ficar na Chapada?
+              </h2>
+            </div>
+            <p className="max-w-md text-lg leading-relaxed text-muted-foreground font-light">
+              Escolher bem sua base muda toda a experiência. Alto Paraíso, São Jorge e Cavalcante oferecem ritmos e acessos distintos.
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-12 lg:grid-cols-3">
             {bases.map((base) => (
-              <Link key={base.name} to={base.to as any} className="group flex flex-col gap-6 overflow-hidden">
-                <div className="aspect-[4/5] overflow-hidden">
+              <Link key={base.name} to={base.to as any} className="group flex flex-col gap-10">
+                <div className="aspect-[3/4] overflow-hidden bg-muted">
                   <img
                     src={base.image}
                     alt={base.name}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                 </div>
-                <div className="flex flex-col gap-3">
-                  <h3 className="font-display text-2xl font-bold uppercase tracking-tight">{base.name}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{base.description}</p>
-                  <div className="mt-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary">
-                    Conhecer região <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                <div className="flex flex-col gap-6">
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-display text-4xl font-medium tracking-tight">{base.name}</h3>
+                    <ArrowRight className="h-6 w-6 text-primary transition-transform group-hover:translate-x-3" />
                   </div>
+                  <p className="text-base leading-relaxed text-muted-foreground font-light">{base.description}</p>
                 </div>
               </Link>
             ))}
-          </div>
-
-          <div className="mt-16 flex justify-center">
-            <Link to="/onde-ficar">
-              <Button variant="outline" className="rounded-none border-foreground/10 px-12 py-7 text-xs font-bold uppercase tracking-widest hover:bg-foreground hover:text-background">
-                Comparar as regiões
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Planeje por perfil */}
-      <section className="bg-foreground py-24 text-background lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 text-center">
-            <h2 className="font-display text-4xl font-medium md:text-5xl lg:text-6xl">
-              Que tipo de Chapada você quer viver?
+      <section className="bg-foreground py-32 text-background lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 text-center">
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent/40 mb-6 block">Curadoria por Perfil</span>
+            <h2 className="font-display text-5xl font-medium md:text-7xl lg:text-8xl tracking-tighter italic">
+              O que você quer viver?
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8">
+          <div className="grid grid-cols-2 gap-px bg-background/10 md:grid-cols-4">
             {perfis.map((p) => (
               <Link
                 key={p.name}
                 to={p.to as any}
-                className="group flex flex-col items-center justify-center border border-background/10 py-12 transition-colors hover:bg-background hover:text-foreground"
+                className="group flex flex-col items-center justify-center p-16 transition-all hover:bg-background hover:text-foreground"
               >
-                <p.icon className="mb-4 h-8 w-8 transition-transform group-hover:scale-110" />
+                <p.icon className="mb-8 h-10 w-10 stroke-[1px] transition-transform group-hover:scale-110" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{p.name}</span>
               </Link>
             ))}
@@ -238,142 +224,121 @@ function Index() {
       </section>
 
       {/* Pousadas em destaque */}
-      <section className="bg-background py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 flex flex-col items-end justify-between gap-6 md:flex-row">
-            <div className="max-w-xl">
-              <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
-                Hospedagens selecionadas
+      <section className="bg-background py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-6 block">Seleção SOBI</span>
+              <h2 className="font-display text-5xl font-medium leading-[1.1] md:text-7xl tracking-tighter">
+                Hospedagens Escolhidas
               </h2>
-              <p className="mt-4 text-muted-foreground">
-                Curadoria de pousadas, chalés, glampings e hospedagens para diferentes estilos de viagem pela Chapada dos Veadeiros.
-              </p>
             </div>
             <Link to="/pousadas">
-              <Button variant="link" className="p-0 text-xs font-bold uppercase tracking-widest text-primary">
-                Ver todas <ArrowRight className="ml-2 h-3 w-3" />
+              <Button variant="link" className="p-0 text-[10px] font-bold uppercase tracking-[0.3em] text-primary hover:no-underline hover:text-accent transition-colors">
+                Ver Curadoria Completa <ArrowRight className="ml-4 h-3 w-3" />
               </Button>
             </Link>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-16 lg:grid-cols-3">
             {pousadasDestaque.map((p) => (
-              <div key={p.name} className="group relative overflow-hidden bg-white shadow-sm transition-all hover:shadow-xl">
-                <div className="aspect-video overflow-hidden">
+              <div key={p.name} className="group flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden bg-muted mb-10">
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-8">
-                  <div className="mb-2 text-[10px] font-bold uppercase tracking-widest text-primary">{p.location}</div>
-                  <h3 className="mb-4 font-display text-2xl font-bold">{p.name}</h3>
-                  <div className="mb-8 flex flex-wrap gap-2">
+                <div>
+                  <div className="mb-4 flex items-center gap-4">
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-primary">{p.location}</span>
+                    <div className="h-[1px] w-8 bg-border" />
+                  </div>
+                  <h3 className="mb-6 font-display text-3xl font-medium tracking-tight group-hover:text-primary transition-colors">{p.name}</h3>
+                  <div className="flex flex-wrap gap-2 mb-10">
                     {p.tags.map(tag => (
-                      <span key={tag} className="bg-secondary px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                      <span key={tag} className="border border-border px-4 py-1.5 text-[8px] font-bold uppercase tracking-widest text-muted-foreground">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <Button className="w-full rounded-none py-6 text-xs font-bold uppercase tracking-widest">
-                    Ver detalhes
+                  <Button variant="outline" className="w-full rounded-none py-8 text-[10px] font-bold uppercase tracking-[0.2em] border-border hover:bg-foreground hover:text-background transition-all">
+                    Explorar Detalhes
                   </Button>
                 </div>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-[10px] italic text-muted-foreground/60">
-            * Hospedagens de exemplo para curadoria editorial.
-          </p>
         </div>
       </section>
 
-      {/* Roteiros Prontos */}
-      <section className="bg-secondary py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 text-center">
-            <h2 className="font-display text-4xl font-medium md:text-5xl">
-              Roteiros para diferentes tempos de viagem
+      {/* Roteiros e Cachoeiras - Grid Minimalista */}
+      <section className="bg-secondary py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="grid lg:grid-cols-2 gap-32">
+             {/* Roteiros */}
+             <div>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-8 block">Logística de Viagem</span>
+                <h2 className="font-display text-5xl font-medium md:text-6xl tracking-tighter mb-16">Roteiros Prontos</h2>
+                <div className="flex flex-col border-t border-border">
+                  {roteiros.slice(0, 4).map((r) => (
+                    <Link
+                      key={r}
+                      to="/roteiros"
+                      className="group flex items-center justify-between py-10 border-b border-border transition-all hover:px-6"
+                    >
+                      <span className="text-xl font-display font-medium group-hover:text-primary transition-colors">{r}</span>
+                      <ArrowRight className="h-5 w-5 text-muted-foreground transition-all group-hover:translate-x-3 group-hover:text-primary" />
+                    </Link>
+                  ))}
+                </div>
+             </div>
+             
+             {/* Cachoeiras */}
+             <div>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-8 block">Natureza Icônica</span>
+                <h2 className="font-display text-5xl font-medium md:text-6xl tracking-tighter mb-16">Cachoeiras</h2>
+                <div className="grid grid-cols-2 gap-4">
+                  {cachoeiras.slice(0, 4).map((c) => (
+                    <Link key={c} to="/cachoeiras" className="group relative aspect-square overflow-hidden">
+                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 mb-2">Explore</span>
+                          <h4 className="text-xl font-display font-medium text-white tracking-tight">{c}</h4>
+                       </div>
+                       <div className="h-full w-full bg-primary/20 transition-transform duration-1000 group-hover:scale-110" />
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-12 flex items-center gap-4 p-8 bg-background border border-border">
+                  <Info className="h-5 w-5 text-primary shrink-0" />
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
+                    Avisos: Acesso, valores e regras variam. Confirme com fontes oficiais antes de sua jornada.
+                  </p>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guias Editoriais */}
+      <section className="bg-background py-32 lg:py-56">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 text-center">
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-6 block">Editorial</span>
+            <h2 className="font-display text-5xl font-medium md:text-7xl lg:text-8xl tracking-tighter">
+              Guia de Planejamento
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 lg:gap-6">
-            {roteiros.map((r) => (
-              <Link
-                key={r}
-                to="/roteiros"
-                className="group flex items-center justify-between border border-border bg-background p-8 transition-all hover:border-primary/30 hover:bg-primary/5"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Calendar className="h-5 w-5" />
-                  </div>
-                  <span className="text-sm font-bold uppercase tracking-widest">{r}</span>
-                </div>
-                <ArrowRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-2 group-hover:text-primary" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Cachoeiras e Paisagens */}
-      <section className="bg-background py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
-                Cachoeiras e paisagens que definem a Chapada
-              </h2>
-              <p className="mt-4 max-w-2xl text-muted-foreground">
-                Das águas azul-turquesa de Santa Bárbara às pedras lunares do Vale da Lua. Conheça os ícones do cerrado.
-              </p>
-            </div>
-            <Link to="/cachoeiras">
-              <Button className="rounded-none bg-primary px-8 py-6 text-xs font-bold uppercase tracking-widest">
-                Ver todas
-              </Button>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-6">
-            {cachoeiras.map((c) => (
-              <div key={c} className="group relative aspect-square cursor-pointer overflow-hidden bg-muted">
-                <div className="absolute inset-0 z-10 flex items-end p-6">
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-white opacity-80 transition-opacity group-hover:opacity-100">
-                    {c}
-                  </span>
-                </div>
-                <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="h-full w-full bg-primary/20 transition-transform duration-700 group-hover:scale-110" />
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 flex items-center gap-2 rounded-lg bg-secondary p-4 text-[10px] text-muted-foreground md:justify-center">
-            <Info className="h-4 w-4 flex-shrink-0" />
-            <p>Informações de acesso, valores, horários e regras devem ser sempre confirmadas com fontes oficiais ou operadores locais antes da visita.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Guias para planejar melhor */}
-      <section className="bg-secondary/30 py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-16 text-center">
-            <h2 className="font-display text-4xl font-medium md:text-5xl">
-              Guias para planejar melhor
-            </h2>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-px bg-border lg:grid-cols-3">
             {blogPosts.slice(0, 6).map((post) => (
               <ArticleCard 
                 key={post.slug}
                 title={post.title}
                 category={post.category}
                 slug={post.slug}
+                subtitle={post.subtitle}
               />
             ))}
           </div>
@@ -381,25 +346,38 @@ function Index() {
       </section>
 
       {/* CTA Comercial */}
-      <section className="bg-primary text-primary-foreground py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-display text-4xl font-medium md:text-5xl mb-6 text-white">Sua pousada pode aparecer melhor para quem está planejando a Chapada.</h2>
-          <p className="text-lg text-white/90 mb-10 max-w-2xl mx-auto">O Chapada dos Veadeiros Online conecta hospedagens, experiências e serviços locais a viajantes que estão pesquisando onde ficar, o que fazer e como viver melhor a Chapada dos Veadeiros.</p>
-          <Link to="/para-pousadas">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 rounded-none px-8 py-7 font-bold uppercase tracking-widest">
-              Quero destacar minha pousada
-            </Button>
-          </Link>
+      <section className="bg-primary text-primary-foreground py-32 lg:py-48 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2" />
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16 relative z-10">
+          <div className="max-w-4xl">
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-8 block">Hospitalidade Local</span>
+            <h2 className="font-display text-5xl font-medium leading-[1.05] md:text-8xl tracking-tighter mb-12 text-white">
+              Sua pousada no <br /><span className="italic font-light">coração do cerrado.</span>
+            </h2>
+            <p className="text-xl text-white/80 mb-16 max-w-2xl font-light leading-relaxed">
+              O Chapada dos Veadeiros Online conecta experiências de alto padrão a viajantes que buscam o extraordinário.
+            </p>
+            <Link to="/para-pousadas">
+              <Button size="lg" className="bg-white text-black hover:bg-accent rounded-none px-16 py-10 text-[10px] font-bold uppercase tracking-[0.3em] transition-all">
+                Quero Destacar minha Pousada
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Sobre o projeto */}
-      <section className="bg-background py-24 border-b border-border">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="font-display text-3xl font-medium mb-6">Um guia criado para organizar a decisão de viagem.</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            O Chapada dos Veadeiros Online é um projeto da SOBI DIGITAL para reunir conteúdo editorial, curadoria de hospedagens, roteiros e informações úteis para quem deseja viver a Chapada com mais clareza, beleza e segurança.
-          </p>
+      <section className="bg-background py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16 text-center">
+           <div className="inline-flex flex-col items-center">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-10 block">Sobre</span>
+              <h2 className="font-display text-4xl font-medium mb-12 max-w-3xl tracking-tight leading-tight italic">
+                Um guia editorial desenhado para organizar a decisão de viagem com clareza e beleza.
+              </h2>
+              <p className="text-muted-foreground max-w-2xl leading-relaxed font-light text-lg">
+                Um projeto SOBI DIGITAL focado em curadoria de hospedagens, roteiros e informações essenciais para o Planalto Central.
+              </p>
+           </div>
         </div>
       </section>
 

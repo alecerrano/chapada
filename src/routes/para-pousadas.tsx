@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PortalHeader } from "@/components/portal/PortalHeader";
 import { PortalFooter } from "@/components/portal/PortalFooter";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/para-pousadas")({
   component: ParaPousadas,
@@ -12,53 +12,60 @@ function ParaPousadas() {
   const formatos = [
     {
       title: "Destaque Local",
-      desc: "Ideal para visibilidade estratégica em páginas específicas.",
-      items: ["Card em página de cidade", "Menção em artigo relacionado", "Botão direto para WhatsApp"]
+      desc: "Visibilidade estratégica em páginas de regiões específicas do portal.",
+      items: ["Card prioritário por cidade", "Menção em artigos curados", "Botão de conversão direta"]
     },
     {
       title: "Página Editorial",
-      desc: "Conteúdo rico para máxima conversão e autoridade.",
-      items: ["Página completa da pousada", "Galeria premium", "Diferenciais e localização"]
+      desc: "Um espaço dedicado com conteúdo profundo para converter viajantes exigentes.",
+      items: ["Apresentação completa da pousada", "Galeria em alta resolução", "Destaque de diferenciais"]
     },
     {
       title: "Presença Premium",
-      desc: "A maior autoridade que uma marca pode ter no portal.",
-      items: ["Destaque na home", "Destaque em artigos", "Menção em roteiros", "Relatório mensal"]
+      desc: "A máxima autoridade que uma marca pode exercer dentro da nossa curadoria.",
+      items: ["Featured na home page", "Presença nativa em roteiros", "Métricas mensais de audiência"]
     },
     {
-      title: "Portal + Site Próprio",
-      desc: "Solução completa de presença digital SOBI DIGITAL.",
-      items: ["Página no portal", "Site próprio profissional", "SEO local completo", "Acompanhamento mensal"]
+      title: "SOBI Digital Ecosystem",
+      desc: "Presença no portal integrada a um site próprio de alta performance.",
+      items: ["Ecossistema digital completo", "Site profissional otimizado", "Gestão de SEO Local"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background font-body">
+    <div className="min-h-screen bg-background font-body text-foreground selection:bg-primary/10">
       <PortalHeader />
-      <main className="pt-40 pb-24">
-        <div className="mx-auto max-w-4xl px-6">
-          <h1 className="font-display text-4xl md:text-6xl font-medium mb-8 leading-tight">
-            Sua pousada pode ser encontrada por quem está planejando a Chapada.
-          </h1>
-          <p className="text-xl text-muted-foreground mb-12 leading-relaxed italic font-light">
-            O Chapada dos Veadeiros Online conecta hospedagens, experiências e serviços locais a viajantes que buscam clareza e beleza no cerrado.
-          </p>
-          
-          <Button size="lg" className="rounded-none px-12 py-8 font-bold uppercase tracking-widest bg-primary hover:bg-primary/90">
-            Falar com a SOBI DIGITAL
-          </Button>
+      <main className="pt-56 pb-32">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="max-w-5xl mb-32">
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-10 block">Parceria Estratégica</span>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-[8rem] font-medium mb-12 leading-[1] tracking-tighter">
+              Destaque seu <br /><span className="italic font-light text-primary">Ativo no Cerrado.</span>
+            </h1>
+            <p className="text-3xl text-muted-foreground mb-16 leading-relaxed italic font-light max-w-3xl">
+              Conectamos hospedagens e experiências de alto padrão a viajantes que buscam clareza, beleza e curadoria.
+            </p>
+            
+            <Button size="lg" className="rounded-none px-16 py-10 font-bold uppercase tracking-[0.3em] bg-primary hover:bg-foreground transition-all">
+              Consultar Apresentação SOBI DIGITAL
+            </Button>
+          </div>
 
-          <section className="mt-32">
-            <h2 className="font-display text-3xl font-medium mb-12 uppercase tracking-tighter">Formatos de parceria</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+          <section className="mb-48">
+            <div className="flex items-center gap-10 mb-24">
+               <h2 className="font-display text-4xl font-medium uppercase tracking-tighter">Formatos de Visibilidade</h2>
+               <div className="h-[1px] flex-grow bg-border" />
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
               {formatos.map(f => (
-                <div key={f.title} className="border border-border p-10 bg-white hover:border-primary transition-colors shadow-sm">
-                  <h3 className="font-display text-2xl font-bold mb-4 leading-tight">{f.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-8 leading-relaxed">{f.desc}</p>
-                  <ul className="space-y-4">
+                <div key={f.title} className="bg-background p-12 hover:bg-secondary transition-all flex flex-col group">
+                  <h3 className="font-display text-3xl font-medium mb-6 leading-tight group-hover:text-primary transition-colors">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-12 leading-relaxed font-light">{f.desc}</p>
+                  <ul className="space-y-6 mt-auto">
                     {f.items.map(item => (
-                      <li key={item} className="flex items-center gap-4 text-xs font-medium tracking-wide">
-                        <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {item}
+                      <li key={item} className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-foreground/70">
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary/40 shrink-0" /> {item}
                       </li>
                     ))}
                   </ul>
@@ -66,6 +73,16 @@ function ParaPousadas() {
               ))}
             </div>
           </section>
+          
+          <div className="bg-foreground text-background p-24 lg:p-32 text-center relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+             <div className="relative z-10">
+               <h2 className="font-display text-4xl md:text-6xl mb-12 tracking-tighter italic">"Organizamos a decisão para quem busca o extraordinário."</h2>
+               <Link to="/">
+                 <Button variant="outline" className="rounded-none border-white/20 text-white hover:bg-white hover:text-black px-12 py-8 text-[10px] font-bold uppercase tracking-[0.3em]">Retornar ao Portal</Button>
+               </Link>
+             </div>
+          </div>
         </div>
       </main>
       <PortalFooter />

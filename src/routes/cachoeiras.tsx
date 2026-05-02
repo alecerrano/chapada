@@ -21,34 +21,42 @@ function Cachoeiras() {
   ];
 
   return (
-    <div className="min-h-screen bg-background font-body">
+    <div className="min-h-screen bg-background font-body text-foreground selection:bg-primary/10">
       <PortalHeader />
-      <main className="pt-32 pb-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <h1 className="font-display text-4xl md:text-6xl font-medium mb-12">Cachoeiras da Chapada dos Veadeiros</h1>
+      <main className="pt-48 pb-32">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24">
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary/40 mb-10 block">Patrimônio Natural</span>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-[7rem] font-medium mb-12 leading-[1.05] tracking-tighter">
+              Cachoeiras e <br /><span className="italic font-light">Abismos de Água.</span>
+            </h1>
+            <p className="text-2xl text-muted-foreground font-light max-w-2xl leading-relaxed">
+              O cerrado revela seus segredos através de quedas monumentais. Nossa seleção das águas que definem o Planalto Central.
+            </p>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             {cachoeiras.map(c => (
-              <div key={c.name} className="border border-border p-8 bg-white hover:border-primary transition-colors">
-                <h3 className="font-display text-xl font-bold mb-4">{c.name}</h3>
-                <div className="space-y-2 mb-8">
-                  <p className="text-[10px] uppercase font-bold text-muted-foreground flex items-center gap-2">
-                    <MapPin className="h-3 w-3" /> {c.local}
-                  </p>
-                  <p className="text-[10px] uppercase font-bold text-muted-foreground">Esforço: {c.esforco}</p>
-                  <p className="text-[10px] uppercase font-bold text-muted-foreground">Perfil: {c.perfil}</p>
+              <div key={c.name} className="group bg-background p-12 transition-all hover:bg-secondary">
+                <div className="mb-10 text-[9px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-4">
+                   {c.local} <div className="h-[1px] w-6 bg-border" />
                 </div>
-                <Button variant="link" className="p-0 text-xs font-bold uppercase tracking-widest text-primary">
-                  Ver guia <ArrowRight className="ml-2 h-3 w-3" />
+                <h3 className="font-display text-3xl font-medium mb-8 tracking-tight">{c.name}</h3>
+                <div className="space-y-3 mb-12">
+                  <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Esforço: <span className="text-foreground">{c.esforco}</span></p>
+                  <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Perfil: <span className="text-foreground">{c.perfil}</span></p>
+                </div>
+                <Button variant="link" className="p-0 text-[10px] font-bold uppercase tracking-[0.3em] text-primary group-hover:text-foreground transition-colors">
+                  Ver Guia do Local <ArrowRight className="ml-4 h-3 w-3 transition-transform group-hover:translate-x-2" />
                 </Button>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 flex items-start gap-4 p-8 bg-secondary border border-border">
-            <Info className="h-5 w-5 text-primary shrink-0" />
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              As informações de acesso, valores, horários e regras podem mudar sem aviso prévio. Antes de visitar, confirme com fontes oficiais, guias locais ou responsáveis pela atração.
+          <div className="mt-32 flex flex-col md:flex-row items-center gap-10 p-16 bg-secondary border border-border">
+            <Info className="h-8 w-8 text-primary shrink-0 opacity-50" />
+            <p className="text-sm text-muted-foreground leading-relaxed italic font-light">
+              Nota Editorial: As informações de acesso, valores, horários e regras são dinâmicas e podem mudar sem aviso prévio. Antes de sua jornada, sempre confirme detalhes com fontes oficiais, guias locais ou responsáveis pela atração.
             </p>
           </div>
         </div>
