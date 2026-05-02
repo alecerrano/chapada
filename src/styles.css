@@ -64,51 +64,69 @@
 }
 
 :root {
-  --radius: 0rem; /* Bordas retas são mais premium e editoriais */
-  --background: oklch(0.99 0.002 90); /* Areia extremamente clara, quase branca */
-  --foreground: oklch(0.15 0.02 260); /* Quase preto, mas com profundidade */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 260);
-  --primary: oklch(0.35 0.06 140); /* Verde cerrado mais profundo e sóbrio */
-  --primary-foreground: oklch(0.99 0.002 90);
-  --secondary: oklch(0.96 0.01 90); /* Areia sutil */
-  --secondary-foreground: oklch(0.15 0.02 260);
-  --muted: oklch(0.94 0.01 90);
-  --muted-foreground: oklch(0.40 0.02 260);
-  --accent: oklch(0.75 0.08 80); /* Dourado areia mais sofisticado */
-  --accent-foreground: oklch(0.15 0.02 260);
-  --destructive: oklch(0.45 0.12 35); /* Terracota queimado */
-  --destructive-foreground: oklch(0.99 0.002 90);
-  --border: oklch(0.90 0.01 90);
-  --input: oklch(0.90 0.01 90);
-  --ring: oklch(0.35 0.06 140);
+  --radius: 0rem;
+
+  /* ============================================
+   * PALETA EDITORIAL — CHAPADA DOS VEADEIROS ONLINE
+   * Inspirada em Cereal Magazine, Kinfolk, Aesop.
+   * Off-white quente · tinta profunda · verde-musgo · pedra
+   * Sem laranja, sem dourado saturado, sem cores de template.
+   * ============================================ */
+
+  /* Superfícies — papel premium, não branco puro */
+  --background: oklch(0.975 0.004 85);          /* Off-white quente, papel de revista */
+  --foreground: oklch(0.18 0.012 60);           /* Tinta marrom-preta, nunca preto puro */
+  --card: oklch(0.985 0.003 85);
+  --card-foreground: oklch(0.18 0.012 60);
+  --popover: oklch(0.985 0.003 85);
+  --popover-foreground: oklch(0.18 0.012 60);
+
+  /* Primary — verde-musgo profundo (cerrado denso, não esmeralda) */
+  --primary: oklch(0.32 0.028 145);
+  --primary-foreground: oklch(0.97 0.004 85);
+
+  /* Secondary — pedra clara, neutro quente */
+  --secondary: oklch(0.94 0.006 75);
+  --secondary-foreground: oklch(0.18 0.012 60);
+
+  /* Muted — silêncio editorial */
+  --muted: oklch(0.93 0.005 75);
+  --muted-foreground: oklch(0.45 0.012 60);
+
+  /* Accent — bordô discreto (terracota apagado, não laranja).
+     Use APENAS para detalhes raros: filetes, números, hover sutil. */
+  --accent: oklch(0.42 0.055 25);
+  --accent-foreground: oklch(0.97 0.004 85);
+
+  --destructive: oklch(0.45 0.13 28);
+  --destructive-foreground: oklch(0.97 0.004 85);
+
+  /* Bordas finíssimas, quase imperceptíveis */
+  --border: oklch(0.88 0.006 75);
+  --input: oklch(0.88 0.006 75);
+  --ring: oklch(0.32 0.028 145);
+
+  /* Charts — paleta tonal, sem cores berrantes */
+  --chart-1: oklch(0.32 0.028 145);
+  --chart-2: oklch(0.45 0.020 90);
+  --chart-3: oklch(0.55 0.015 60);
+  --chart-4: oklch(0.42 0.055 25);
+  --chart-5: oklch(0.65 0.012 75);
+
+  --sidebar: oklch(0.97 0.004 85);
+  --sidebar-foreground: oklch(0.18 0.012 60);
+  --sidebar-primary: oklch(0.32 0.028 145);
+  --sidebar-primary-foreground: oklch(0.97 0.004 85);
+  --sidebar-accent: oklch(0.94 0.006 75);
+  --sidebar-accent-foreground: oklch(0.18 0.012 60);
+  --sidebar-border: oklch(0.88 0.006 75);
+  --sidebar-ring: oklch(0.32 0.028 145);
+
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
-  
-  /* Espaçamento editorial */
+
   --section-padding: 8rem;
   --container-max: 90rem;
-}
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
 .dark {
