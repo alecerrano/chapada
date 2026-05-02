@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-chapada.jpg";
 import vilaImg from "@/assets/vila.jpg";
 import valeLuaImg from "@/assets/vale-lua.jpg";
 import cachoeiraImg from "@/assets/cachoeira.jpg";
@@ -7,12 +6,13 @@ import { Button } from "@/components/ui/button";
 import { 
   Heart, Users, Mountain, 
   Sparkles, Crown, Ticket, Droplets, ArrowRight,
-  Compass, Car, Calendar, Info
+  Compass, Calendar, Info
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-data";
 import { PortalHeader } from "@/components/portal/PortalHeader";
 import { PortalFooter } from "@/components/portal/PortalFooter";
 import { ArticleCard } from "@/components/portal/ArticleCard";
+import { HeroGallery } from "@/components/portal/HeroGallery";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -96,52 +96,8 @@ function Index() {
     <div className="min-h-screen bg-background font-body text-foreground selection:bg-primary/10">
       <PortalHeader />
 
-      {/* Hero Section */}
-      <section className="relative flex h-[100svh] w-full items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImg}
-            alt="Chapada dos Veadeiros"
-            className="h-full w-full object-cover brightness-[0.6] transition-transform duration-[15s] hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background" />
-        </div>
-
-        <div className="relative z-10 w-full max-w-[90rem] px-8 lg:px-16">
-          <div className="max-w-5xl">
-            <span className="mb-8 inline-block text-[10px] font-black uppercase tracking-[0.5em] text-accent">
-              Edição 2026 — Guia Editorial
-            </span>
-            <h1 className="font-display text-6xl font-medium leading-[1.05] text-white md:text-8xl lg:text-[10rem] tracking-tighter">
-              A Chapada<br />
-              <span className="italic font-light">Inspirada.</span>
-            </h1>
-            <p className="mt-10 max-w-2xl text-xl text-white/80 md:text-2xl font-light leading-relaxed">
-              Um guia curado para quem busca escolher melhor onde ficar, o que fazer e como viver o destino com intenção.
-            </p>
-
-            <div className="mt-16 flex flex-wrap gap-6">
-              <Link to="/onde-ficar">
-                <Button className="rounded-none bg-accent px-12 py-8 text-[10px] font-bold uppercase tracking-[0.2em] text-black hover:bg-white transition-all">
-                  Onde Ficar
-                </Button>
-              </Link>
-              <Link to="/roteiros">
-                <Button variant="outline" className="rounded-none border-white/20 bg-white/5 px-12 py-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-xl hover:bg-white hover:text-black transition-all">
-                  Explorar Roteiros
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        
-        <div className="absolute bottom-12 right-16 hidden lg:block">
-           <div className="flex items-center gap-6">
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Scroll to explore</span>
-              <div className="h-[1px] w-24 bg-white/20" />
-           </div>
-        </div>
-      </section>
+      {/* Hero Editorial Gallery */}
+      <HeroGallery />
 
       {/* Institutional Quote */}
       <section className="bg-background py-32 lg:py-56 border-b border-border/50">
