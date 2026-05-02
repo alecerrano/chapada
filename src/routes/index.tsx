@@ -326,6 +326,28 @@ function Index() {
           </div>
         </div>
       </section>
+      {/* Seção 8: CTA Comercial */}
+      <section className="bg-primary text-primary-foreground py-24">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="font-display text-4xl font-medium md:text-5xl mb-6">Sua pousada pode aparecer melhor para quem está planejando a Chapada.</h2>
+          <p className="text-lg text-primary-foreground/90 mb-10 max-w-2xl mx-auto">O Chapada dos Veadeiros Online conecta hospedagens, experiências e serviços locais a viajantes que estão pesquisando onde ficar, o que fazer e como viver melhor a Chapada dos Veadeiros.</p>
+          <Link to="/para-pousadas">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 rounded-none px-8 py-7 font-bold uppercase tracking-widest">
+              Quero destacar minha pousada
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Seção 9: Sobre */}
+      <section className="bg-background py-24 border-b border-border">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="font-display text-3xl font-medium mb-6">Um guia criado para organizar a decisão de viagem.</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            O Chapada dos Veadeiros Online é um projeto da SOBI DIGITAL para reunir conteúdo editorial, curadoria de hospedagens, roteiros e informações úteis para quem deseja viver a Chapada com mais clareza, beleza e segurança.
+          </p>
+        </div>
+      </section>
 
       {/* Seção 4: Pousadas em destaque */}
       <section className="bg-background py-24 lg:py-32">
