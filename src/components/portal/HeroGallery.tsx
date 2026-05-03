@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-chapada.jpg";
-import valeLuaImg from "@/assets/vale-lua.jpg";
-import cachoeiraImg from "@/assets/cachoeira.jpg";
-import vilaImg from "@/assets/vila.jpg";
+import heroImg from "@/assets/gallery/santa-barbara.jpg";
+import valeLuaImg from "@/assets/gallery/pocos-cristal.jpg";
+import cachoeiraImg from "@/assets/gallery/por-do-sol.jpg";
+import vilaImg from "@/assets/gallery/ceu-estrelado.jpg";
 
 interface HeroSlide {
   image: string;
