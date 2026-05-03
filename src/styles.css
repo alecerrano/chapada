@@ -67,60 +67,60 @@
   --radius: 0rem;
 
   /* ============================================
-   * PALETA EDITORIAL — CHAPADA DOS VEADEIROS ONLINE
-   * Inspirada em Cereal Magazine, Kinfolk, Aesop.
-   * Off-white quente · tinta profunda · verde-musgo · pedra
-   * Sem laranja, sem dourado saturado, sem cores de template.
+   * PALETA — CHAPADA DOS VEADEIROS ONLINE
+   * Leve, arejada, sofisticada. Lifestyle de natureza,
+   * não revista de inverno. Quem vai à Chapada busca
+   * sol, água, cerrado, liberdade — não escuridão.
+   *
+   * Areia clara · tinta suave · sálvia · terra cota fumê
    * ============================================ */
 
-  /* Superfícies — papel premium, não branco puro */
-  --background: oklch(0.975 0.004 85);          /* Off-white quente, papel de revista */
-  --foreground: oklch(0.18 0.012 60);           /* Tinta marrom-preta, nunca preto puro */
-  --card: oklch(0.985 0.003 85);
-  --card-foreground: oklch(0.18 0.012 60);
-  --popover: oklch(0.985 0.003 85);
-  --popover-foreground: oklch(0.18 0.012 60);
+  /* Superfícies — areia clara e arejada */
+  --background: oklch(0.985 0.006 90);          /* Areia muito clara, quase marfim */
+  --foreground: oklch(0.28 0.015 60);           /* Tinta sépia suave, nunca preto */
+  --card: oklch(0.995 0.004 90);
+  --card-foreground: oklch(0.28 0.015 60);
+  --popover: oklch(0.995 0.004 90);
+  --popover-foreground: oklch(0.28 0.015 60);
 
-  /* Primary — verde-musgo profundo (cerrado denso, não esmeralda) */
-  --primary: oklch(0.32 0.028 145);
-  --primary-foreground: oklch(0.97 0.004 85);
+  /* Primary — sálvia profunda, herbácea e seca (cerrado ao sol) */
+  --primary: oklch(0.46 0.032 135);
+  --primary-foreground: oklch(0.985 0.006 90);
 
-  /* Secondary — pedra clara, neutro quente */
-  --secondary: oklch(0.94 0.006 75);
-  --secondary-foreground: oklch(0.18 0.012 60);
+  /* Secondary — areia quente, neutro arejado */
+  --secondary: oklch(0.95 0.010 85);
+  --secondary-foreground: oklch(0.28 0.015 60);
 
-  /* Muted — silêncio editorial */
-  --muted: oklch(0.93 0.005 75);
-  --muted-foreground: oklch(0.45 0.012 60);
+  /* Muted — silêncio claro */
+  --muted: oklch(0.94 0.008 85);
+  --muted-foreground: oklch(0.52 0.015 65);
 
-  /* Accent — bordô discreto (terracota apagado, não laranja).
-     Use APENAS para detalhes raros: filetes, números, hover sutil. */
-  --accent: oklch(0.42 0.055 25);
-  --accent-foreground: oklch(0.97 0.004 85);
+  /* Accent — terracota fumê, raro e elegante (nunca laranja) */
+  --accent: oklch(0.58 0.060 40);
+  --accent-foreground: oklch(0.985 0.006 90);
 
-  --destructive: oklch(0.45 0.13 28);
-  --destructive-foreground: oklch(0.97 0.004 85);
+  --destructive: oklch(0.50 0.13 28);
+  --destructive-foreground: oklch(0.985 0.006 90);
 
-  /* Bordas finíssimas, quase imperceptíveis */
-  --border: oklch(0.88 0.006 75);
-  --input: oklch(0.88 0.006 75);
-  --ring: oklch(0.32 0.028 145);
+  /* Bordas finíssimas */
+  --border: oklch(0.90 0.008 85);
+  --input: oklch(0.90 0.008 85);
+  --ring: oklch(0.46 0.032 135);
 
-  /* Charts — paleta tonal, sem cores berrantes */
-  --chart-1: oklch(0.32 0.028 145);
-  --chart-2: oklch(0.45 0.020 90);
-  --chart-3: oklch(0.55 0.015 60);
-  --chart-4: oklch(0.42 0.055 25);
-  --chart-5: oklch(0.65 0.012 75);
+  --chart-1: oklch(0.46 0.032 135);
+  --chart-2: oklch(0.58 0.060 40);
+  --chart-3: oklch(0.65 0.025 95);
+  --chart-4: oklch(0.55 0.040 75);
+  --chart-5: oklch(0.72 0.020 85);
 
-  --sidebar: oklch(0.97 0.004 85);
-  --sidebar-foreground: oklch(0.18 0.012 60);
-  --sidebar-primary: oklch(0.32 0.028 145);
-  --sidebar-primary-foreground: oklch(0.97 0.004 85);
-  --sidebar-accent: oklch(0.94 0.006 75);
-  --sidebar-accent-foreground: oklch(0.18 0.012 60);
-  --sidebar-border: oklch(0.88 0.006 75);
-  --sidebar-ring: oklch(0.32 0.028 145);
+  --sidebar: oklch(0.985 0.006 90);
+  --sidebar-foreground: oklch(0.28 0.015 60);
+  --sidebar-primary: oklch(0.46 0.032 135);
+  --sidebar-primary-foreground: oklch(0.985 0.006 90);
+  --sidebar-accent: oklch(0.95 0.010 85);
+  --sidebar-accent-foreground: oklch(0.28 0.015 60);
+  --sidebar-border: oklch(0.90 0.008 85);
+  --sidebar-ring: oklch(0.46 0.032 135);
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
