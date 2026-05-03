@@ -1,0 +1,24 @@
+// Centralized gallery imports
+export { default as galAraras } from "./araras.jpg";
+export { default as galBanheiraCerrado } from "./banheira-cerrado.jpg";
+export { default as galCachoeiraAlta } from "./cachoeira-alta.jpg";
+export { default as galCanyon } from "./canyon.jpg";
+export { default as galCeuEstrelado } from "./ceu-estrelado.jpg";
+export { default as galChaleRustico } from "./chale-rustico.jpg";
+export { default as galChalesAframe } from "./chales-aframe.jpg";
+export { default as galDeckRede } from "./deck-rede.jpg";
+export { default as galEcoResort } from "./eco-resort.jpg";
+export { default as galEstrada } from "./estrada.jpg";
+export { default as galMergulho } from "./mergulho.jpg";
+export { default as galPiscinaGrutas } from "./piscina-grutas.jpg";
+export { default as galPiscinaLagoa } from "./piscina-lagoa.jpg";
+export { default as galPiscinaNoite } from "./piscina-noite.jpg";
+export { default as galPocosCristal } from "./pocos-cristal.jpg";
+export { default as galPorDoSol } from "./por-do-sol.jpg";
+export { default as galQuartoMadeira } from "./quarto-madeira.jpg";
+export { default as galRedeMirante } from "./rede-mirante.jpg";
+export { default as galSantaBarbara } from "./santa-barbara.jpg";
+export { default as galSuiteConfort } from "./suite-confort.jpg";
+export { default as galSuiteVista } from "./suite-vista.jpg";
+export { default as galVarandaMirante } from "./varanda-mirante.jpg";
+export { default as galVillaAerea } from "./villa-aerea.jpg";

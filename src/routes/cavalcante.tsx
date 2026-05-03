@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import cachoeiraImg from "@/assets/cachoeira.jpg";
+import cachoeiraImg from "@/assets/gallery/santa-barbara.jpg";
 
 export const Route = createFileRoute("/cavalcante")({
   component: CidadePage,

@@ -1,7 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import vilaImg from "@/assets/vila.jpg";
-import valeLuaImg from "@/assets/vale-lua.jpg";
-import cachoeiraImg from "@/assets/cachoeira.jpg";
+import vilaImg from "@/assets/gallery/villa-aerea.jpg";
+import valeLuaImg from "@/assets/gallery/chale-rustico.jpg";
+import cachoeiraImg from "@/assets/gallery/santa-barbara.jpg";
+import pousada1 from "@/assets/gallery/suite-vista.jpg";
+import pousada2 from "@/assets/gallery/chales-aframe.jpg";
+import pousada3 from "@/assets/gallery/varanda-mirante.jpg";
+import cach1 from "@/assets/gallery/santa-barbara.jpg";
+import cach2 from "@/assets/gallery/pocos-cristal.jpg";
+import cach3 from "@/assets/gallery/cachoeira-alta.jpg";
+import cach4 from "@/assets/gallery/mergulho.jpg";
+import edAraras from "@/assets/gallery/araras.jpg";
+import edPorDoSol from "@/assets/gallery/por-do-sol.jpg";
+import edEstrada from "@/assets/gallery/estrada.jpg";
+import edCanyon from "@/assets/gallery/canyon.jpg";
+import edPiscinaLagoa from "@/assets/gallery/piscina-lagoa.jpg";
+import edBanheira from "@/assets/gallery/banheira-cerrado.jpg";
 import { Button } from "@/components/ui/button";
 import { 
   Heart, Users, Mountain, 
@@ -65,19 +78,19 @@ const pousadasDestaque = [
     name: "Pousada Vista do Cerrado",
     location: "Alto Paraíso",
     tags: ["exemplo", "casal", "vista"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+    image: pousada1,
   },
   {
     name: "Chalés Caminho das Águas",
     location: "São Jorge",
     tags: ["exemplo", "natureza", "vila"],
-    image: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800",
+    image: pousada2,
   },
   {
     name: "Refúgio Santa Bárbara",
     location: "Cavalcante",
     tags: ["exemplo", "autenticidade", "descanso"],
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800",
+    image: pousada3,
   }
 ];
 
@@ -86,9 +99,11 @@ const roteiros = [
   "Roteiro para casal", "Roteiro de cachoeiras", "Primeira viagem à Chapada"
 ];
 
-const cachoeiras = [
-  "Santa Bárbara", "Vale da Lua", "Catarata dos Couros", "Almécegas",
-  "Loquinhas", "Rio Preto", "Segredo", "Macaquinhos"
+const cachoeirasList = [
+  { name: "Santa Bárbara", img: cach1 },
+  { name: "Vale da Lua", img: cach2 },
+  { name: "Catarata dos Couros", img: cach3 },
+  { name: "Almécegas", img: cach4 },
 ];
 
 function Index() {
@@ -256,13 +271,13 @@ function Index() {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-8 block">Natureza Icônica</span>
                 <h2 className="font-display text-5xl font-medium md:text-6xl tracking-tighter mb-16">Cachoeiras</h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {cachoeiras.slice(0, 4).map((c) => (
-                    <Link key={c} to="/cachoeiras" className="group relative aspect-square overflow-hidden">
-                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-transparent to-transparent">
-                          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 mb-2">Explore</span>
-                          <h4 className="text-xl font-display font-medium text-white tracking-tight">{c}</h4>
+                  {cachoeirasList.map((c) => (
+                    <Link key={c.name} to="/cachoeiras" className="group relative aspect-square overflow-hidden">
+                       <img src={c.img} alt={c.name} className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-2">Explore</span>
+                          <h4 className="text-xl font-display font-medium text-white tracking-tight">{c.name}</h4>
                        </div>
-                       <div className="h-full w-full bg-primary/20 transition-transform duration-1000 group-hover:scale-110" />
                     </Link>
                   ))}
                 </div>
@@ -318,6 +333,39 @@ function Index() {
                 Quero Destacar minha Pousada
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria Editorial */}
+      <section className="bg-foreground text-background py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent mb-6 block">Ensaio Visual</span>
+              <h2 className="font-display text-5xl font-medium leading-[1.1] md:text-7xl tracking-tighter italic">Cerrado em frames.</h2>
+            </div>
+            <p className="max-w-md text-lg leading-relaxed text-background/60 font-light">
+              Da fauna ancestral ao céu mais limpo do Brasil — texturas que definem a Chapada.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+            {[
+              { img: edAraras, tag: "Fauna", title: "Araras-azuis" },
+              { img: edPorDoSol, tag: "Hora dourada", title: "Pequi silhueta" },
+              { img: edCanyon, tag: "Geologia", title: "Quartzito ancestral" },
+              { img: edPiscinaLagoa, tag: "Hospitalidade", title: "Lagoas de descanso" },
+              { img: edBanheira, tag: "Ritual", title: "Banhos com vista" },
+              { img: edEstrada, tag: "Travessia", title: "Estrada dos veadeiros" },
+            ].map((f) => (
+              <figure key={f.title} className="relative aspect-[3/4] overflow-hidden group">
+                <img src={f.img} alt={f.title} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-accent">{f.tag}</span>
+                  <p className="font-display text-xl text-white mt-1">{f.title}</p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

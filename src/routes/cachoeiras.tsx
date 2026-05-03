@@ -10,14 +10,14 @@ export const Route = createFileRoute("/cachoeiras")({
 
 function Cachoeiras() {
   const cachoeiras = [
-    { name: "Santa Bárbara", local: "Cavalcante", esforco: "Médio", perfil: "Iconográfica" },
-    { name: "Vale da Lua", local: "São Jorge", esforco: "Leve", perfil: "Contemplativa" },
-    { name: "Catarata dos Couros", local: "Alto Paraíso", esforco: "Médio", perfil: "Aventura" },
-    { name: "Almécegas I e II", local: "Alto Paraíso", esforco: "Leve/Médio", perfil: "Família" },
-    { name: "Loquinhas", local: "Alto Paraíso", esforco: "Leve", perfil: "Família" },
-    { name: "Rio Preto", local: "São Jorge", esforco: "Médio", perfil: "Parque Nacional" },
-    { name: "Segredo", local: "São Jorge", esforco: "Médio", perfil: "Trilha" },
-    { name: "Macaquinhos", local: "Alto Paraíso", esforco: "Alto", perfil: "Natureza selvagem" },
+    { name: "Santa Bárbara", local: "Cavalcante", esforco: "Médio", perfil: "Iconográfica", img: new URL("@/assets/gallery/santa-barbara.jpg", import.meta.url).href },
+    { name: "Vale da Lua", local: "São Jorge", esforco: "Leve", perfil: "Contemplativa", img: new URL("@/assets/gallery/pocos-cristal.jpg", import.meta.url).href },
+    { name: "Catarata dos Couros", local: "Alto Paraíso", esforco: "Médio", perfil: "Aventura", img: new URL("@/assets/gallery/cachoeira-alta.jpg", import.meta.url).href },
+    { name: "Almécegas I e II", local: "Alto Paraíso", esforco: "Leve/Médio", perfil: "Família", img: new URL("@/assets/gallery/mergulho.jpg", import.meta.url).href },
+    { name: "Loquinhas", local: "Alto Paraíso", esforco: "Leve", perfil: "Família", img: new URL("@/assets/gallery/piscina-lagoa.jpg", import.meta.url).href },
+    { name: "Rio Preto", local: "São Jorge", esforco: "Médio", perfil: "Parque Nacional", img: new URL("@/assets/gallery/canyon.jpg", import.meta.url).href },
+    { name: "Segredo", local: "São Jorge", esforco: "Médio", perfil: "Trilha", img: new URL("@/assets/gallery/mergulho.jpg", import.meta.url).href },
+    { name: "Macaquinhos", local: "Alto Paraíso", esforco: "Alto", perfil: "Natureza selvagem", img: new URL("@/assets/gallery/cachoeira-alta.jpg", import.meta.url).href },
   ];
 
   return (
@@ -37,18 +37,23 @@ function Cachoeiras() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             {cachoeiras.map(c => (
-              <div key={c.name} className="group bg-background p-12 transition-all hover:bg-secondary">
-                <div className="mb-10 text-[9px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-4">
-                   {c.local} <div className="h-[1px] w-6 bg-border" />
+              <div key={c.name} className="group bg-background flex flex-col transition-all hover:bg-secondary">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={c.img} alt={c.name} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                 </div>
-                <h3 className="font-display text-3xl font-medium mb-8 tracking-tight">{c.name}</h3>
-                <div className="space-y-3 mb-12">
-                  <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Esforço: <span className="text-foreground">{c.esforco}</span></p>
-                  <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Perfil: <span className="text-foreground">{c.perfil}</span></p>
+                <div className="p-10 flex flex-col flex-grow">
+                  <div className="mb-8 text-[9px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-4">
+                    {c.local} <div className="h-[1px] w-6 bg-border" />
+                  </div>
+                  <h3 className="font-display text-2xl font-medium mb-6 tracking-tight">{c.name}</h3>
+                  <div className="space-y-2 mb-8">
+                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Esforço: <span className="text-foreground">{c.esforco}</span></p>
+                    <p className="text-[10px] uppercase font-bold tracking-widest text-muted-foreground/60">Perfil: <span className="text-foreground">{c.perfil}</span></p>
+                  </div>
+                  <Button variant="link" className="p-0 mt-auto justify-start text-[10px] font-bold uppercase tracking-[0.3em] text-primary group-hover:text-foreground transition-colors">
+                    Ver Guia <ArrowRight className="ml-4 h-3 w-3 transition-transform group-hover:translate-x-2" />
+                  </Button>
                 </div>
-                <Button variant="link" className="p-0 text-[10px] font-bold uppercase tracking-[0.3em] text-primary group-hover:text-foreground transition-colors">
-                  Ver Guia do Local <ArrowRight className="ml-4 h-3 w-3 transition-transform group-hover:translate-x-2" />
-                </Button>
               </div>
             ))}
           </div>

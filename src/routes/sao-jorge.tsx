@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import valeLuaImg from "@/assets/vale-lua.jpg";
+import valeLuaImg from "@/assets/gallery/chale-rustico.jpg";
 
 export const Route = createFileRoute("/sao-jorge")({
   component: CidadePage,
