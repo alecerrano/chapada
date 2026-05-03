@@ -337,6 +337,39 @@ function Index() {
         </div>
       </section>
 
+      {/* Galeria Editorial */}
+      <section className="bg-foreground text-background py-32 lg:py-48">
+        <div className="mx-auto max-w-[90rem] px-8 lg:px-16">
+          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
+            <div className="max-w-2xl">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent mb-6 block">Ensaio Visual</span>
+              <h2 className="font-display text-5xl font-medium leading-[1.1] md:text-7xl tracking-tighter italic">Cerrado em frames.</h2>
+            </div>
+            <p className="max-w-md text-lg leading-relaxed text-background/60 font-light">
+              Da fauna ancestral ao céu mais limpo do Brasil — texturas que definem a Chapada.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+            {[
+              { img: edAraras, tag: "Fauna", title: "Araras-azuis" },
+              { img: edPorDoSol, tag: "Hora dourada", title: "Pequi silhueta" },
+              { img: edCanyon, tag: "Geologia", title: "Quartzito ancestral" },
+              { img: edPiscinaLagoa, tag: "Hospitalidade", title: "Lagoas de descanso" },
+              { img: edBanheira, tag: "Ritual", title: "Banhos com vista" },
+              { img: edEstrada, tag: "Travessia", title: "Estrada dos veadeiros" },
+            ].map((f) => (
+              <figure key={f.title} className="relative aspect-[3/4] overflow-hidden group">
+                <img src={f.img} alt={f.title} className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-accent">{f.tag}</span>
+                  <p className="font-display text-xl text-white mt-1">{f.title}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Sobre o projeto */}
       <section className="bg-background py-32 lg:py-48">
         <div className="mx-auto max-w-[90rem] px-8 lg:px-16 text-center">
