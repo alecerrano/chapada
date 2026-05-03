@@ -120,14 +120,14 @@ export const HeroGallery = () => {
           <img
             src={s.image}
             alt=""
-            className="h-full w-full object-cover brightness-[0.55]"
+            className="h-full w-full object-cover brightness-[0.85]"
             style={{
               transform: i === active ? "scale(1.05)" : "scale(1)",
               transition: "transform 8s ease-out",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
         </div>
       ))}
 
