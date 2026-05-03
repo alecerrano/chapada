@@ -166,11 +166,11 @@ export const HeroGallery = () => {
                 <div className="h-[1px] w-16 bg-accent/60" />
               </div>
 
-              <h1 className="font-display text-6xl font-medium leading-[1] text-white md:text-8xl lg:text-[10rem] tracking-tighter">
+              <h1 className="font-display text-6xl font-medium leading-[1] text-white md:text-8xl lg:text-[10rem] tracking-tighter [text-shadow:0_2px_30px_rgba(0,0,0,0.55)]">
                 {slide.title}
               </h1>
 
-              <p className="mt-12 max-w-xl text-xl text-white/80 md:text-2xl font-light leading-relaxed italic">
+              <p className="mt-12 max-w-xl text-xl text-white md:text-2xl font-light leading-relaxed italic [text-shadow:0_1px_18px_rgba(0,0,0,0.65)]">
                 {slide.excerpt}
               </p>
 
