@@ -13,10 +13,12 @@ function Pousadas() {
   const filtros = ["Alto Paraíso", "São Jorge", "Cavalcante", "Casal", "Família", "Luxo", "Chalé", "Vista", "Natureza"];
   
   const pousadas = [
-    { name: "Pousada Vista do Cerrado", city: "Alto Paraíso", perfil: "Casal", tag: "Exemplo", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" },
-    { name: "Chalé das Estrelas", city: "São Jorge", perfil: "Casal", tag: "Exemplo", img: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800" },
-    { name: "Eco Lodge Veadeiros", city: "Cavalcante", perfil: "Aventura", tag: "Exemplo", img: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800" },
-    { name: "Reserva do Sol", city: "Alto Paraíso", perfil: "Família", tag: "Exemplo", img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=800" },
+    { name: "Pousada Vista do Cerrado", city: "Alto Paraíso", perfil: "Casal", tag: "Exemplo", img: new URL("@/assets/gallery/suite-vista.jpg", import.meta.url).href },
+    { name: "Chalé das Estrelas", city: "São Jorge", perfil: "Casal", tag: "Exemplo", img: new URL("@/assets/gallery/chales-aframe.jpg", import.meta.url).href },
+    { name: "Eco Lodge Veadeiros", city: "Cavalcante", perfil: "Aventura", tag: "Exemplo", img: new URL("@/assets/gallery/varanda-mirante.jpg", import.meta.url).href },
+    { name: "Reserva do Sol", city: "Alto Paraíso", perfil: "Família", tag: "Exemplo", img: new URL("@/assets/gallery/villa-aerea.jpg", import.meta.url).href },
+    { name: "Refúgio das Águas", city: "São Jorge", perfil: "Casal", tag: "Exemplo", img: new URL("@/assets/gallery/piscina-lagoa.jpg", import.meta.url).href },
+    { name: "Suíte Mirante", city: "Cavalcante", perfil: "Luxo", tag: "Exemplo", img: new URL("@/assets/gallery/rede-mirante.jpg", import.meta.url).href },
   ];
 
   return (
