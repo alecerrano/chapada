@@ -126,8 +126,9 @@ export const HeroGallery = () => {
               transition: "transform 8s ease-out",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-black/15" />
         </div>
       ))}
 
