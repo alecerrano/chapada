@@ -1,7 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import vilaImg from "@/assets/vila.jpg";
-import valeLuaImg from "@/assets/vale-lua.jpg";
-import cachoeiraImg from "@/assets/cachoeira.jpg";
+import vilaImg from "@/assets/gallery/villa-aerea.jpg";
+import valeLuaImg from "@/assets/gallery/chale-rustico.jpg";
+import cachoeiraImg from "@/assets/gallery/santa-barbara.jpg";
+import pousada1 from "@/assets/gallery/suite-vista.jpg";
+import pousada2 from "@/assets/gallery/chales-aframe.jpg";
+import pousada3 from "@/assets/gallery/varanda-mirante.jpg";
+import cach1 from "@/assets/gallery/santa-barbara.jpg";
+import cach2 from "@/assets/gallery/pocos-cristal.jpg";
+import cach3 from "@/assets/gallery/cachoeira-alta.jpg";
+import cach4 from "@/assets/gallery/mergulho.jpg";
+import edAraras from "@/assets/gallery/araras.jpg";
+import edPorDoSol from "@/assets/gallery/por-do-sol.jpg";
+import edEstrada from "@/assets/gallery/estrada.jpg";
+import edCanyon from "@/assets/gallery/canyon.jpg";
+import edPiscinaLagoa from "@/assets/gallery/piscina-lagoa.jpg";
+import edBanheira from "@/assets/gallery/banheira-cerrado.jpg";
 import { Button } from "@/components/ui/button";
 import { 
   Heart, Users, Mountain, 
