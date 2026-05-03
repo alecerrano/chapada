@@ -78,19 +78,19 @@ const pousadasDestaque = [
     name: "Pousada Vista do Cerrado",
     location: "Alto Paraíso",
     tags: ["exemplo", "casal", "vista"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800",
+    image: pousada1,
   },
   {
     name: "Chalés Caminho das Águas",
     location: "São Jorge",
     tags: ["exemplo", "natureza", "vila"],
-    image: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800",
+    image: pousada2,
   },
   {
     name: "Refúgio Santa Bárbara",
     location: "Cavalcante",
     tags: ["exemplo", "autenticidade", "descanso"],
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800",
+    image: pousada3,
   }
 ];
 
@@ -99,9 +99,11 @@ const roteiros = [
   "Roteiro para casal", "Roteiro de cachoeiras", "Primeira viagem à Chapada"
 ];
 
-const cachoeiras = [
-  "Santa Bárbara", "Vale da Lua", "Catarata dos Couros", "Almécegas",
-  "Loquinhas", "Rio Preto", "Segredo", "Macaquinhos"
+const cachoeirasList = [
+  { name: "Santa Bárbara", img: cach1 },
+  { name: "Vale da Lua", img: cach2 },
+  { name: "Catarata dos Couros", img: cach3 },
+  { name: "Almécegas", img: cach4 },
 ];
 
 function Index() {
