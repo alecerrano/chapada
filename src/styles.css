@@ -68,59 +68,58 @@
 
   /* ============================================
    * PALETA — CHAPADA DOS VEADEIROS ONLINE
-   * Leve, arejada, sofisticada. Lifestyle de natureza,
-   * não revista de inverno. Quem vai à Chapada busca
-   * sol, água, cerrado, liberdade — não escuridão.
+   * Vibe: paraíso natural, lifestyle, leveza solar.
+   * Referência: Réveillon Maravilha (Taíba) — natureza
+   * exuberante, esporte, celebração, luz.
    *
-   * Areia clara · tinta suave · sálvia · terra cota fumê
+   * Areia luminosa · tinta sépia · sálvia clara ·
+   * terracota sol · água rasa (apoio)
    * ============================================ */
 
-  /* Superfícies — areia clara e arejada */
-  --background: oklch(0.985 0.006 90);          /* Areia muito clara, quase marfim */
-  --foreground: oklch(0.28 0.015 60);           /* Tinta sépia suave, nunca preto */
-  --card: oklch(0.995 0.004 90);
-  --card-foreground: oklch(0.28 0.015 60);
-  --popover: oklch(0.995 0.004 90);
-  --popover-foreground: oklch(0.28 0.015 60);
+  /* Superfícies — areia clara banhada de sol */
+  --background: oklch(0.98 0.010 88);
+  --foreground: oklch(0.30 0.020 55);
+  --card: oklch(0.995 0.006 88);
+  --card-foreground: oklch(0.30 0.020 55);
+  --popover: oklch(0.995 0.006 88);
+  --popover-foreground: oklch(0.30 0.020 55);
 
-  /* Primary — sálvia profunda, herbácea e seca (cerrado ao sol) */
-  --primary: oklch(0.46 0.032 135);
-  --primary-foreground: oklch(0.985 0.006 90);
+  /* Primary — sálvia clara e arejada (cerrado ao sol, não floresta densa) */
+  --primary: oklch(0.52 0.040 145);
+  --primary-foreground: oklch(0.99 0.008 88);
 
-  /* Secondary — areia quente, neutro arejado */
-  --secondary: oklch(0.95 0.010 85);
-  --secondary-foreground: oklch(0.28 0.015 60);
+  /* Secondary — areia quente */
+  --secondary: oklch(0.95 0.014 82);
+  --secondary-foreground: oklch(0.30 0.020 55);
 
-  /* Muted — silêncio claro */
-  --muted: oklch(0.94 0.008 85);
-  --muted-foreground: oklch(0.52 0.015 65);
+  --muted: oklch(0.94 0.012 82);
+  --muted-foreground: oklch(0.52 0.018 60);
 
-  /* Accent — terracota fumê, raro e elegante (nunca laranja) */
-  --accent: oklch(0.58 0.060 40);
-  --accent-foreground: oklch(0.985 0.006 90);
+  /* Accent — terracota sol-nascente, quente porém suave (NÃO laranja saturado) */
+  --accent: oklch(0.62 0.090 45);
+  --accent-foreground: oklch(0.99 0.008 88);
 
-  --destructive: oklch(0.50 0.13 28);
-  --destructive-foreground: oklch(0.985 0.006 90);
+  --destructive: oklch(0.55 0.16 28);
+  --destructive-foreground: oklch(0.99 0.008 88);
 
-  /* Bordas finíssimas */
-  --border: oklch(0.90 0.008 85);
-  --input: oklch(0.90 0.008 85);
-  --ring: oklch(0.46 0.032 135);
+  --border: oklch(0.90 0.012 82);
+  --input: oklch(0.90 0.012 82);
+  --ring: oklch(0.52 0.040 145);
 
-  --chart-1: oklch(0.46 0.032 135);
-  --chart-2: oklch(0.58 0.060 40);
-  --chart-3: oklch(0.65 0.025 95);
-  --chart-4: oklch(0.55 0.040 75);
-  --chart-5: oklch(0.72 0.020 85);
+  --chart-1: oklch(0.52 0.040 145);
+  --chart-2: oklch(0.62 0.090 45);
+  --chart-3: oklch(0.68 0.040 200); /* hint de água rasa */
+  --chart-4: oklch(0.58 0.045 75);
+  --chart-5: oklch(0.74 0.022 85);
 
-  --sidebar: oklch(0.985 0.006 90);
-  --sidebar-foreground: oklch(0.28 0.015 60);
-  --sidebar-primary: oklch(0.46 0.032 135);
-  --sidebar-primary-foreground: oklch(0.985 0.006 90);
-  --sidebar-accent: oklch(0.95 0.010 85);
-  --sidebar-accent-foreground: oklch(0.28 0.015 60);
-  --sidebar-border: oklch(0.90 0.008 85);
-  --sidebar-ring: oklch(0.46 0.032 135);
+  --sidebar: oklch(0.98 0.010 88);
+  --sidebar-foreground: oklch(0.30 0.020 55);
+  --sidebar-primary: oklch(0.52 0.040 145);
+  --sidebar-primary-foreground: oklch(0.99 0.008 88);
+  --sidebar-accent: oklch(0.95 0.014 82);
+  --sidebar-accent-foreground: oklch(0.30 0.020 55);
+  --sidebar-border: oklch(0.90 0.012 82);
+  --sidebar-ring: oklch(0.52 0.040 145);
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
