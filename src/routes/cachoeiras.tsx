@@ -10,14 +10,14 @@ export const Route = createFileRoute("/cachoeiras")({
 
 function Cachoeiras() {
   const cachoeiras = [
-    { name: "Santa Bárbara", local: "Cavalcante", esforco: "Médio", perfil: "Iconográfica" },
-    { name: "Vale da Lua", local: "São Jorge", esforco: "Leve", perfil: "Contemplativa" },
-    { name: "Catarata dos Couros", local: "Alto Paraíso", esforco: "Médio", perfil: "Aventura" },
-    { name: "Almécegas I e II", local: "Alto Paraíso", esforco: "Leve/Médio", perfil: "Família" },
-    { name: "Loquinhas", local: "Alto Paraíso", esforco: "Leve", perfil: "Família" },
-    { name: "Rio Preto", local: "São Jorge", esforco: "Médio", perfil: "Parque Nacional" },
-    { name: "Segredo", local: "São Jorge", esforco: "Médio", perfil: "Trilha" },
-    { name: "Macaquinhos", local: "Alto Paraíso", esforco: "Alto", perfil: "Natureza selvagem" },
+    { name: "Santa Bárbara", local: "Cavalcante", esforco: "Médio", perfil: "Iconográfica", img: new URL("@/assets/gallery/santa-barbara.jpg", import.meta.url).href },
+    { name: "Vale da Lua", local: "São Jorge", esforco: "Leve", perfil: "Contemplativa", img: new URL("@/assets/gallery/pocos-cristal.jpg", import.meta.url).href },
+    { name: "Catarata dos Couros", local: "Alto Paraíso", esforco: "Médio", perfil: "Aventura", img: new URL("@/assets/gallery/cachoeira-alta.jpg", import.meta.url).href },
+    { name: "Almécegas I e II", local: "Alto Paraíso", esforco: "Leve/Médio", perfil: "Família", img: new URL("@/assets/gallery/mergulho.jpg", import.meta.url).href },
+    { name: "Loquinhas", local: "Alto Paraíso", esforco: "Leve", perfil: "Família", img: new URL("@/assets/gallery/piscina-lagoa.jpg", import.meta.url).href },
+    { name: "Rio Preto", local: "São Jorge", esforco: "Médio", perfil: "Parque Nacional", img: new URL("@/assets/gallery/canyon.jpg", import.meta.url).href },
+    { name: "Segredo", local: "São Jorge", esforco: "Médio", perfil: "Trilha", img: new URL("@/assets/gallery/mergulho.jpg", import.meta.url).href },
+    { name: "Macaquinhos", local: "Alto Paraíso", esforco: "Alto", perfil: "Natureza selvagem", img: new URL("@/assets/gallery/cachoeira-alta.jpg", import.meta.url).href },
   ];
 
   return (
