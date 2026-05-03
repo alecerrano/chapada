@@ -271,13 +271,13 @@ function Index() {
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40 mb-8 block">Natureza Icônica</span>
                 <h2 className="font-display text-5xl font-medium md:text-6xl tracking-tighter mb-16">Cachoeiras</h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {cachoeiras.slice(0, 4).map((c) => (
-                    <Link key={c} to="/cachoeiras" className="group relative aspect-square overflow-hidden">
-                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-transparent to-transparent">
-                          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 mb-2">Explore</span>
-                          <h4 className="text-xl font-display font-medium text-white tracking-tight">{c}</h4>
+                  {cachoeirasList.map((c) => (
+                    <Link key={c.name} to="/cachoeiras" className="group relative aspect-square overflow-hidden">
+                       <img src={c.img} alt={c.name} className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-2">Explore</span>
+                          <h4 className="text-xl font-display font-medium text-white tracking-tight">{c.name}</h4>
                        </div>
-                       <div className="h-full w-full bg-primary/20 transition-transform duration-1000 group-hover:scale-110" />
                     </Link>
                   ))}
                 </div>
